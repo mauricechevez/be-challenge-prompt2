@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Create a post
+    body 
+        h1 Create a Post 
+        form(action="/create", method="post") 
+            label(for="name")|Enter Your Name 
+            br
+            input#name(type="text", name="name", placeholder="Enter your Name")
+            br
+            label(for="name")|Movie Title
+            br
+            input#movietitle(type="text", name="movietitle", placeholder="Enter the Movie Title")
+            br
+            label(for="moviedescription") Movie Description 
+            br
+            textarea#description(name="description", cols="60", rows="10")
+            br
+            label(for="score") Score 
+            br
+            input#score(type="number" name="score" placeholder="X/10")
+            br
+            input#submit(type="submit" value="Submit" name="submit")
