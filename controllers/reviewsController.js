@@ -24,23 +24,39 @@ router.get('/', (req, res) => {
     .catch((error) => res.send({ error }))
   })
 
-  router.get('/:id', (req, res) => {
-    models.movieReview.findOne({_id: req.params.id}).then((review) => {
-      res.status(200).json({ review })
-    })
-    .catch((error) => res.send({ error }))
-  })
+
 
 router.post('/create', (req,res)=>{
     const post = req.body
     models.movieReview.create(post)
     .then((review)=>{
         console.log(review)
-        // res.status(201).json({review})
-        res.render("../views/create")
+        res.status(201).json({review})
+        // res.render("../views/create")
     })
     .catch((error)=> console.log(error))
 })
 
+router.get('/all', (req,res)=>{
+  models.movieReview.find()
+  .then((reviews)=>{
+    res.status(201).json({reviews})
+    // res.render('../views/all', {
+    //   website: "Movie Review Website",
+    //   result: reviews
+    // })
+  })
+  .catch((error)=>{
+    console.log('~~~~ ERROR ~~~~ ')
+    console.log(error)
+  })
+})
+
+router.get('/:id', (req, res) => {
+  models.movieReview.findOne({_id: req.params.id}).then((review) => {
+    res.status(200).json({ review })
+  })
+  .catch((error) => res.send({ error }))
+})
 
 module.exports = router
