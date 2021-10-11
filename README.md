@@ -35,7 +35,8 @@ A comment model for each review..
 
 
 ## 3rd party API to use
-I did not have time to implement this function, not only due to family obligations, but due to not having the knowledge of getting this done on time. 
+I did not have time to implement this function, not only due to family obligations, but due to not having the knowledge of getting this done on time. I know how to pull data from an API, but I don't know how to integrate this into my own database. 
+
 ~~I would likely use the OMDB API, but need to figure out how to add it to a "favorites" model. This favorites model will not be tied to a specific user, instead, anyone can add movie found from the API to the DB. How to integrate this?....~~
 
 ## Link to finished product
