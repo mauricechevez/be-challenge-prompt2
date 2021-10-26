@@ -135,4 +135,7 @@ Spotify https://developer.spotify.com/documentation/web-api/ (Can lead to confus
 
 ## Source Credit
 https://github.com/dcartist/Backend-challenge/blob/main/README.md
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8d90cf9bec983f4071cd9bb1cbcd6f70015e9497
